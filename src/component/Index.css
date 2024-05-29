@@ -1,0 +1,25 @@
+.container{
+}
+.responsive-input {
+  height: 75vh; 
+  width: 45vw;  
+  box-sizing: border-box; 
+  padding: 10px; 
+  font-size: 16px;
+  resize: none;
+  border-radius: 2%;
+  
+}
+
+.textbox{
+  /* border: 1px solid white; */
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#paraphrase{
+  width: 95%;
+  margin: 15px;
+}
