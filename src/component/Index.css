@@ -93,3 +93,15 @@ textarea{
 .output{
   border-radius: 2% 0% 2% 2%;
 }
+
+.wordCount{
+  position: absolute;
+  z-index: 4;
+  color:black;
+  margin:9px;
+  bottom: 78px;
+  border-radius: 10% 10% 0% 0%;
+  padding:3px;
+  padding-left:14px;
+  padding-right:14px;
+}

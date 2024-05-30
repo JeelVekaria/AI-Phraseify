@@ -1,28 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Index.css";
 import axios from "axios";
-import ParaphrasedText from "./ParaphrasedText";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
-// const options = {
-//   method: "POST",
-//   url: "https://paraphrasing-api2.p.rapidapi.com/long-rewriter",
-//   params: {
-//     text: "",
-//     unique: "1",
-//     mode: "fluent",
-//   },
-//   headers: {
-//     "X-RapidAPI-Key": `${API_KEY}`,
-//     "X-RapidAPI-Host": "paraphrasing-api2.p.rapidapi.com",
-//   },
-// };
 
 const Index = () => {
   const [text, setText] = useState("");
   const [output, setOutput] = useState("");
-  const [count, setCount] = useState(0);
-  const [jobID, setJobID] = useState("waiting for jobID");
 
   // updates count on click
   const handleSubmit = async () => {
@@ -42,12 +26,6 @@ const Index = () => {
     } catch (error) {
       console.log(error);
     }
-  };
-
-  // Child calls parent to update output message
-  // Child retrieves paraphrased text
-  const changeOutput = (msg) => {
-    setOutput(msg);
   };
 
   return (
@@ -71,6 +49,7 @@ const Index = () => {
             placeholder="Type here..."
             onChange={(event) => setText(event.target.value)}
           />
+          <pre className="wordCount">Words: {text.length==0? 0 : text.trim().replace(/\s+/g,' ').split(" ").length}</pre>
         </div>
 
         <div className="box">
@@ -83,11 +62,11 @@ const Index = () => {
             id="outputBox"
             value={output}
             placeholder="Output will display here..."
-          />
+            />
+            <pre className="wordCount">Words: {output.length==0? 0 : output.trim().replace(/\s+/g,' ').split(" ").length}</pre>
         </div>
       </div>
 
-      {/* <ParaphrasedText changeOutput={changeOutput} jobID={jobID}/> */}
       <div>
         {/* paraphrase button */}
         <button id="paraphrase" onClick={handleSubmit}>
