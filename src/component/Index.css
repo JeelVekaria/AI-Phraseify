@@ -1,5 +1,3 @@
-.container{
-}
 .responsive-input {
   height: 75vh; 
   width: 45vw;  
@@ -7,8 +5,22 @@
   padding: 10px; 
   font-size: 16px;
   resize: none;
-  border-radius: 2%;
-  
+  border-radius: 0% 2% 2% 2%;
+  font-family:monospace;
+  color: rgb(36, 36, 39);
+}
+
+#inputBox{
+  background-color: rgb(181, 214, 227) !important;
+  box-shadow: 8px 8px  rgb(128, 163, 176);
+}
+#outputBox{
+  box-shadow: 8px 8px  rgb(176, 128, 128);
+  background-color: rgb(227, 181, 181) !important;
+}
+
+.output2{
+  border-bottom: 3px solid rgb(176, 128, 128) !important;
 }
 
 .textbox{
@@ -21,5 +33,63 @@
 
 #paraphrase{
   width: 95%;
-  margin: 15px;
+  margin: 16px;
+  margin-top: 21px;
+  background-color: rgb(202, 181, 227);
+  font-size: 20px;
+
+  /* background-color: rgb(176, 128, 128); */
+}
+
+
+.honk{
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+}
+
+.title{
+  position: absolute;
+  border-bottom: 3px solid rgb(128, 163, 176);
+  
+  width: 80px;
+  margin-top: -32px;
+  border-radius: 12% 12% 0% 0%;
+  padding: 3px;
+  color:black;
+  z-index: 1;
+}
+
+.box:nth-child(1){
+  display: flex;
+  justify-content: left;
+}
+.box:nth-child(2){
+  display: flex;
+  justify-content: right;
+}
+pre{
+  /* background-color: darken(rgba(0, 0, 0, 0.55), 10%); */
+  /* background-color: hsl(230, 100%, 80%); */
+}
+
+/* Removes border glow */
+textarea{
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  z-index: 3;
+}
+
+/* makes output box have a curved border */
+.output{
+  border-radius: 2% 0% 2% 2%;
 }
