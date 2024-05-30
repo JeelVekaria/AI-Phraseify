@@ -47,9 +47,6 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "MORF" 15,
-    "SHLN" 50;
 }
 
 .title{
@@ -72,10 +69,6 @@
   display: flex;
   justify-content: right;
 }
-pre{
-  /* background-color: darken(rgba(0, 0, 0, 0.55), 10%); */
-  /* background-color: hsl(230, 100%, 80%); */
-}
 
 /* Removes border glow */
 textarea{
@@ -97,11 +90,89 @@ textarea{
 .wordCount{
   position: absolute;
   z-index: 4;
-  color:black;
+  color:rgba(0, 0, 0, 0.641);
   margin:9px;
   bottom: 78px;
   border-radius: 10% 10% 0% 0%;
   padding:3px;
   padding-left:14px;
   padding-right:14px;
+}
+
+.inputWordCount{
+  left:612px;
+}
+
+
+/* Loading */
+.spinner {
+  width: 70.4px;
+  height: 70.4px;
+  --clr: rgb(189, 115, 115);
+  --clr-alpha: rgb(247, 197, 159,.1);
+  animation: spinner 1.6s infinite ease;
+  transform-style: preserve-3d;
+
+}
+
+.loadingAnimation{
+  position: absolute;
+  z-index: 3;
+  right:320px;
+  top:300px;
+}
+.loadingAnimation pre{
+  margin-top: 30px;
+  margin-left: -10px;
+  color:rgb(189, 115, 115);
+  font-weight: bold;
+}
+.spinner > div {
+  background-color: var(--clr-alpha);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 3.5px solid var(--clr);
+}
+
+.spinner div:nth-of-type(1) {
+  transform: translateZ(-35.2px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+  transform: translateZ(35.2px);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
+
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
+
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
 }

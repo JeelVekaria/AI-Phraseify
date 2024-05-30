@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .env
+src/component/Title.css
+src/component/Title.jsx
+src/component/ParaphrasedText.jsx.jsx
