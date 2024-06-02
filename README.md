@@ -14,7 +14,7 @@ I developed a paraphrasing tool using ReactJS, HTML, CSS, Node.js, and the AI21 
 - Axios: A promise-based HTTP client for the browser and Node.js, used to make HTTP requests to the GitHub API.
 - AI21 Labs API: For generating paraphrased text using generative AI technology.
 
-Demo Video (38s): https://github.com/JeelVekaria/AI-Phraseify/assets/51273807/d9e28692-3f61-44da-89a1-e9e5439ae87a
+Demo Video (38s): https://github.com/JeelVekaria/AI-Phraseify/assets/51273807/c12018be-84be-41c4-a542-400ac3938581
 ![image](https://github.com/JeelVekaria/AI-Phraseify/assets/51273807/b518a66a-30b7-4ff7-a31b-bdcb6bca2214)
 ![image](https://github.com/JeelVekaria/AI-Phraseify/assets/51273807/c71aedaa-f163-4f3f-bc78-d62f4ec594d6)
 ![image](https://github.com/JeelVekaria/AI-Phraseify/assets/51273807/70d50a50-c0a8-4b81-85be-be79756c8acc)
